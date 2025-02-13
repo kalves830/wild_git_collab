@@ -9,14 +9,28 @@ execute:
 ---
 
 
+#load libraries
+```{r}
+library(ggplot2)
+```
+
+
 ## STEP 5: No merge conflicts!
 
 ```{r partner 1}
 ### In this code chunk, start with the diamonds dataset (built in to
 ### ggplot2 package) and create a plot of price vs. carat (or some other
 ### variables of your choice)
+data("diamonds")
 
+expl_diam <- ggplot(diamonds, aes(x=price, y=carat)) +
+  geom_point()+
+  labs(title = "Price vs. Carat",
+       x = "Price",
+       y = "Carat") +
+  theme_minimal()
 
+expl_diam
 ```
 
 ```{r partner 2}
@@ -31,10 +45,8 @@ execute:
 ## STEP 7: Uh oh, merge conflicts!
 
 ```{r break-it-1}
-### Both partners - delete this comment, then write some code here
-### to plot, summarize, calculate something simple using the diamonds
-### dataset.
-
+diam_data <- diamonds |>
+  clean_names() +
 
 ```
 
