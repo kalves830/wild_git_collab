@@ -69,11 +69,12 @@ diam_data <- diamonds |>
 ## STEP 11: And even more merge conflicts!
 
 ```{r break-it-2}
-<<<<<<< HEAD
+
 sam_made_me_do_this_histogram <- ggplot(diam_data, aes(x=values, fill = "lightpink")) +
   geom_histogram()+
   facet_wrap(~name, scales = "free_x")
-=======
+
+
 ### Both partners - delete this comment, then write some code here
 ### to plot, summarize, calculate something simple using the diamonds
 ### dataset
@@ -84,8 +85,6 @@ eDgY_gyrl <- diamonds |>
   scale_fill_manual(values = c("black", "white", "yellow", "purple", "orange"))
 
 eDgY_gyrl
-
->>>>>>> 683c72c1c9819340b61d80d981f7c58f7f0c164d
 
 sam_made_me_do_this_histogram
 
