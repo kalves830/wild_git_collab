@@ -12,6 +12,8 @@ execute:
 #load libraries
 ```{r}
 library(ggplot2)
+library(janitor)
+library(tidyverse)
 ```
 
 
@@ -49,14 +51,12 @@ diamond_mod <- diamonds |>
 ## STEP 7: Uh oh, merge conflicts!
 
 ```{r break-it-1}
-<<<<<<< HEAD
 diam_data <- diamonds |>
-  clean_names() +
-=======
-### Both partners - delete this comment, then write some code here
-### to plot, summarize, calculate something simple using the diamonds
-### dataset.
->>>>>>> 41ebd27845e77fc76f45b54848f1ee30bf59d709
+  pivot_longer(names_to = "name", values_to = "values", where(is.numeric)) |>
+  drop_na()
+
+
+
 
 ```
 
