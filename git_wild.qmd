@@ -38,15 +38,25 @@ expl_diam
 ### ggplot2 package) and create a subset based on filtering, e.g., 
 ### size greater than 1 carat or cut is "Ideal"
 
+library(ggplot2)
+library(tidyverse)
 
+diamond_mod <- diamonds |>
+  filter(carat > 1 | cut == "Ideal")
 
 ```
 
 ## STEP 7: Uh oh, merge conflicts!
 
 ```{r break-it-1}
+<<<<<<< HEAD
 diam_data <- diamonds |>
   clean_names() +
+=======
+### Both partners - delete this comment, then write some code here
+### to plot, summarize, calculate something simple using the diamonds
+### dataset.
+>>>>>>> 41ebd27845e77fc76f45b54848f1ee30bf59d709
 
 ```
 
