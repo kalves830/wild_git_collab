@@ -12,6 +12,8 @@ execute:
 #load libraries
 ```{r}
 library(ggplot2)
+library(janitor)
+library(tidyverse)
 ```
 
 
@@ -56,6 +58,11 @@ diamond_mod <- diamonds |>
 
 kyles_ideal_diamond <- diamonds |>
   filter(carat > 3 & price > 3000 & cut == "Premium" & color == "E")
+
+
+diam_data <- diamonds |>
+  pivot_longer(names_to = "name", values_to = "values", where(is.numeric)) |>
+  drop_na()
 
 ```
 
