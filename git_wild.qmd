@@ -69,10 +69,11 @@ diam_data <- diamonds |>
 ## STEP 11: And even more merge conflicts!
 
 ```{r break-it-2}
-### Both partners - delete this comment, then write some code here
-### to plot, summarize, calculate something simple using the diamonds
-### dataset.
+sam_made_me_do_this_histogram <- ggplot(diam_data, aes(x=values, fill = "lightpink")) +
+  geom_histogram()+
+  facet_wrap(~name, scales = "free_x")
 
+sam_made_me_do_this_histogram
 
 ```
 
