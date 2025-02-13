@@ -71,7 +71,15 @@ diam_data <- diamonds |>
 ```{r break-it-2}
 ### Both partners - delete this comment, then write some code here
 ### to plot, summarize, calculate something simple using the diamonds
-### dataset.
+### dataset
+
+eDgY_gyrl <- diamonds |>
+  ggplot(aes(x= cut, y = carat, fill = cut)) +
+  geom_col() +
+  scale_fill_manual(values = c("black", "white", "yellow", "purple", "orange"))
+
+eDgY_gyrl
+
 
 
 ```
